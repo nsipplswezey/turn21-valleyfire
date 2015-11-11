@@ -629,6 +629,7 @@
                               <br>It’s time for Homo sapiens to grow up
                               <br>before we drive the hotrod of civilization off a cliff.
                               <br>Take action today.
+                              <br>Let's turn 21.
                               <br><a href='http://www.turn21.org'>turn21.org</a></div>
                         </div>
                       </div> <!-- Video Sequence -->
@@ -743,7 +744,7 @@
         muteVolume = mute ? "_volume" : "volume";
         muteButton.classed("navigation-volume--muted", mute);
         d3.event.preventDefault();
-        d3.selectAll("audio,video").interrupt().property("volume", mute
+        d3.selectAll("audio").interrupt().property("volume", mute
                                                          ? function() { this._volume = this.volume; return 0; }
                                                          : function() { return this._volume; });
     }
@@ -785,7 +786,7 @@
 
         if (d.first) {
             if (videoNode) {
-                volume = d3.event.rect.top < fixTop + fadeTop ? Math.max(0, Math.min(1, 1 - (d3.event.rect.top - fixTop) / fadeTop)) : 0;
+                //volume = d3.event.rect.top < fixTop + fadeTop ? Math.max(0, Math.min(1, 1 - (d3.event.rect.top - fixTop) / fadeTop)) : 0;
                 var play = d3.event.rect.top <= fixTop + fadeTop;
                 if (videoNode.paused) {
                     if (play && (!d.animation || (videoNode.currentTime < videoNode.duration && volume > .8))) {
@@ -816,7 +817,7 @@
 
         if (d.last) {
             if (videoNode) {
-                volume = d3.event.rect.bottom < fadeBottom ? Math.max(0, Math.min(1, 1 - (fadeBottom - d3.event.rect.bottom) / fadeTop)) : 1;
+                //volume = d3.event.rect.bottom < fadeBottom ? Math.max(0, Math.min(1, 1 - (fadeBottom - d3.event.rect.bottom) / fadeTop)) : 1;
                 var play = d3.event.rect.bottom >= fadeBottom - fadeTop;
                 if (videoNode.paused) {
                     if (play && (!d.animation || (videoNode.currentTime < videoNode.duration && volume > .8))) {
