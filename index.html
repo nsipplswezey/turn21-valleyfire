@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+
+
+<meta charset="utf-8">
+
+<html>
+    <head>
+
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//piwik.turning21.io:8080/";
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', 1]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <noscript><p><img src="//piwik.turning21.io:8080//piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Piwik Code -->
+
+
+
+        <title>Turn21 - Let's Turn 21 Together - Turn21.org</title>
+    </head>
+
+
+    <style>
+        body {
+            font: 17px/28px Georgia;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #004276;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .article {
+            border-top: solid 1px #000;
+        }
+
+        .section {
+            margin-top: 150px;
+        }
+
+        .section:after {
+            content: "";
+            clear: left;
+            display: block;
+        }
+
+        .section--last {
+            margin-bottom: 130px;
+        }
+
+        .section--credits {
+            color: #999;
+            font-style: oblique;
+        }
+
+        .section--credits a {
+            color: #444;
+        }
+
+        .column {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 580px;
+        }
+
+        .section h3 {
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .scroll-prompt {
+            position: absolute;
+            bottom: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            font-size: 10px;
+            opacity: 0.8;
+            font-weight: normal;
+            text-transform: uppercase;
+            z-index: 3;
+            margin-left: 7%;
+            padding-left: 112px;
+        }
+
+        .scroll-prompt svg {
+            fill: none;
+            stroke: white;
+            stroke-width: 2px;
+        }
+
+        .dropcap {
+            float: left;
+            font: bold 53px/70px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: -7px 10px 0 0;
+            height: 1em;
+        }
+
+        .headline,
+        .section h3 {
+            font: 200 30px/40px "nyt-cheltenham", Georgia, serif;
+        }
+
+        .headline {
+            font-size: 45px;
+            line-height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .byline-rule {
+            border-top: 2px solid #000;
+            width: 120px;
+        }
+
+        .byline {
+            font: 12px/2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+            opacity: .5;
+        }
+
+        .byline .author {
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .byline--first {
+            margin-bottom: 14px;
+            opacity: 1;
+            font-weight: 700;
+            padding-top: 23px;
+        }
+
+        @media (max-width: 704px) {
+            .column {
+                margin: auto 5%;
+                max-width: 100%;
+            }
+    }
+
+        .image {
+            width: 120%;
+            margin: 40px -10%;
+        }
+
+        .image img {
+            width: 100%;
+        }
+
+        .image .caption {
+            font: 12px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+            clear: left;
+            color: #999;
+        }
+
+        @media (min-width: 1200px) {
+            .image--diptych {
+                width: 200%;
+                margin-left: -50%;
+            }
+
+        .image--diptych img {
+            position: relative;
+            width: 50%;
+            float: left;
+            left: 5px;
+        }
+
+        .image--diptych .caption {
+            margin-left: -5px;
+            padding-top: .7em;
+        }
+
+        .image--diptych img:first-child {
+            left: -5px;
+        }
+    }
+        .video {
+            font: bold 17px/30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .video-container {
+            float: left;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .video-container video,
+        .video-container img {
+            width: 100%;
+            position: absolute;
+        }
+
+        .video-caption {
+            margin-top: 5px;
+            color: #888;
+            padding-bottom: 20px;
+        }
+
+        .video-source {
+            font: 11px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #999;
+            position: absolute;
+            bottom: 10px;
+            right: 7%;
+            z-index: 3;
+        }
+
+        .column .video {
+            border: solid 8px #f0f0f0;
+            box-sizing: border-box;
+            margin: 40px -10%;
+            width: 120%;
+        }
+
+        .video-sequence:first-child {
+            margin-top: 40px;
+        }
+
+        .video-sequence .video {
+            min-height: 56.25vw;
+        }
+
+        .video-sequence-indicator {
+            font-family: arial;
+            position: absolute;
+            line-height: 1.4em;
+            top: 50%;
+            right: 20px;
+            color: #fff;
+            white-space: pre;
+        }
+
+        .video {
+            float: left;
+        }
+
+        .video + p {
+            clear: left;
+        }
+
+        .video .video-caption {
+            position: absolute;
+            left: 7%;
+            bottom: 20%;
+            width: 240px;
+            z-index: 3;
+            color: #fff;
+            text-shadow: 0 1px 2px #000;
+            padding: 20px 0;
+        }
+
+        .video-sequence .video:last-of-type .video-caption {
+            bottom: 30%;
+        }
+
+        .video .video-caption--long {
+            width: 400px;
+            bottom: 12.44%;
+        }
+
+        .video .video-caption--right {
+            right: 7%;
+            left: inherit;
+            text-align: right;
+        }
+
+        .video .video-caption--center {
+            left: inherit;
+            text-align: center;
+            width: 50%;
+            margin: 0 25%;
+        }
+
+        .video .video-caption--head {
+            top: 0;
+            left: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-caption--head .video-headline {
+            position: absolute;
+            top: 10%;
+            color: white;
+            left: 7%;
+            border-bottom: solid 2px white;
+            text-shadow: none;
+            font-size: 50px;
+            line-height: 55px;
+            padding-bottom: 35px;
+        }
+
+        .video-caption--head .video-summary {
+            position: absolute;
+            top: auto;
+            bottom: 12%;
+            left: 7%;
+            width: 270px;
+            text-shadow: 0 1px 2px #000;
+        }
+
+        @media only screen and (min-width: 1200px) and (max-width: 1440px) and (min-height: 500px) and (max-height: 800px) {
+            .video-caption--head .video-headline {
+                top: 20%;
+            }
+
+        .video-caption--head .video-summary {
+            bottom: 20%;
+        }
+    }
+
+
+        .map > * {
+            position: absolute;
+        }
+
+        .map {
+            color: #fff;
+            font: 13px/18px "Helvetica Neue",Helvetica,arial,sans-serif;
+            height: 512px;
+            margin: 40px -94px;
+            padding-bottom: 1.4em;
+            position: relative;
+            width: 768px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .map p {
+            margin: 0;
+            opacity: .95;
+        }
+
+        .map-source {
+            font: 11px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #999;
+            bottom: -.2em;
+            right: 0;
+        }
+
+        @font-face {
+            font-family: "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif";
+            src: url(Fonts/Baskerville-Regular-webfont.woff) format("woff");
+            font-style: normal;
+            font-weight: 200;
+        }
+    </style>
+
+    <script>
+
+        var pageHeight = function() {
+            return window.innerHeight || document.documentElement.clientHeight;
+        };
+
+    </script>
+
+    <script>(function() {
+
+    var defers = [];
+    defer = function(f) { defers.push(f); };
+    await = function() { defers.forEach(function(f) { f(); }); };
+
+})();</script>
+
+    <style>
+
+        .navigation {
+            font: 200 12px/20px "nyt-cheltenham", Georgia, serif;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 39px;
+            background: #000;
+            z-index: 20;
+        }
+
+        .navigation a {
+            color: #fff;
+        }
+
+        .navigation-left,
+        .navigation-left > *,
+        .navigation-right > * {
+            float: left;
+        }
+
+        .navigation-left {
+            margin-left: 7%;
+        }
+
+        .navigation-right {
+            float: right;
+            margin-right: 7%;
+        }
+
+        .navigation-headline:before,
+        .navigation-sections:before,
+        .navigation-shares:before {
+            content: "";
+            float: left;
+            height: 20px;
+            border-right: solid 1px #444;
+            margin: 9px 15px;
+        }
+
+        .navigation-logo {
+            float: left;
+            background: url(assets/icons.png) 0 -6px;
+            height: 17px;
+            margin: 11px 0 0 0;
+            width: 199px;
+        }
+
+        .navigation-headline {
+            float: left;
+            letter-spacing: .1em;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .navigation-headline:before {
+            margin-top: 0;
+        }
+
+        .navigation-sections:before {
+            margin-right: 5px;
+        }
+
+        .navigation-section {
+            padding: 10px 10px 9px 10px;
+            float: left;
+        }
+
+        .navigation-section:last-child {
+            padding-right: 0;
+        }
+
+        .navigation-logo,
+        .navigation-section,
+        .navigation-volume {
+            opacity: .5;
+        }
+
+        .navigation-logo:hover,
+        .navigation-section:hover,
+        .navigation-section--active,
+        .navigation-volume:hover {
+            opacity: 1;
+        }
+
+        .navigation-marker {
+            position: absolute;
+            margin-top: -80px;
+        }
+
+        .navigation-volume,
+        .navigation-share {
+            display: inline-block;
+            padding: 11px 5px;
+        }
+
+        .navigation-icon {
+            width: 18px;
+            height: 18px;
+            background-image: url(assets/icons.png);
+        }
+
+        .navigation-share--twitter .navigation-icon { background-position: -6px -28px; }
+        .navigation-share--twitter:hover .navigation-icon { background-position: -6px -48px; }
+        .navigation-share--facebook .navigation-icon { background-position: -26px -28px; }
+        .navigation-share--facebook:hover .navigation-icon { background-position: -26px -48px; }
+        .navigation-share--email .navigation-icon { background-position: -28px -68px; width: 22px; }
+        .navigation-share--email:hover .navigation-icon { background-position: -5px -68px; }
+        .navigation-volume .navigation-icon { background-position: -52px -68px; }
+        .navigation-volume.navigation-volume--muted .navigation-icon { background-position: -72px -68px; }
+
+
+    </style>
+    <div class="navigation">
+        <div class="navigation-left">
+            <!--         <a class="navigation-logo" href="http://www.nytimes.com/pages/magazine/index.html" alt="The New York Times Magazine"></a> -->
+            <a class="navigation-headline" href="#">Turn21</a>
+        </div>
+        <div class="navigation-right">
+            <a href="#" class="navigation-volume"><div class="navigation-icon"></div></a>
+            <div class="navigation-shares">
+                <a href="#" class="navigation-share navigation-share--facebook"><div class="navigation-icon"></div></a>
+                <a href="#" class="navigation-share navigation-share--twitter"><div class="navigation-icon"></div></a>
+                <a href="#" target="_blank" class="navigation-share navigation-share--email"><div class="navigation-icon"></div></a>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        defer(function() {
+
+            var anchor = d3.selectAll(".navigation-section").on("click", clicked),
+                marker = d3.selectAll(".navigation-marker"),
+                markerOffsets;
+
+            d3.select(".navigation-headline")
+            .on("click", clicked);
+
+            d3.select(window)
+            .on("resize.navigation", resized)
+            .on("load.navigation", resized)
+            .on("scroll.navigation", scrolled);
+
+            resized();
+
+            function resized() {
+                markerOffsets = marker.datum(function(d, i) { return i ? this.offsetTop : 0; }).data();
+                scrolled();
+            }
+
+            function scrolled() {
+                //this +80 is a short term hack.
+                //Attend to this when we get to react.
+                var j = Math.max(0, Math.min(markerOffsets.length - 1, d3.bisectLeft(markerOffsets, pageYOffset + 80) - 1));
+                anchor.classed("navigation-section--active", function(d, i) { return i === j; });
+            }
+
+            function clicked(d, i) {
+                d3.event.preventDefault();
+                d3.transition().duration(750).tween("scroll", function() {
+                    //this +80 is a short term hack.
+                    //Attend to this when we get to react.
+                    var offset = d3.interpolateNumber(pageYOffset, (markerOffsets[i] + 80));
+                    return function(t) { scrollTo(0, offset(t)); };
+                });
+            }
+
+        });
+
+    </script>
+
+            <div class="main">
+                <div class="article">
+                    <div class="section video-sequence" data-audio="intro">
+                        <div class="video" data-video="ValleyFireGE">
+                            <a class="navigation-marker" id="1"></a>
+                            <div class="video-container">
+                            </div>
+                            <div class="video-caption video-caption--head">
+                                <div class="video-headline headline"> Turn21 <br> September </div>
+                                <div class="video-summary">We found a huge pile of carbon and hydrocarbons and we gave ourselves permission to burn it, mostly without anything to show for it afterwards. The longer we continue doing this the worse the future will be.</div>
+                                <div class="scroll-prompt">
+                                    Scroll<br>
+                                    <svg width="18" height="8">
+                                        <path d="M0,0L9,7L18,0"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="video-container">
+                                <img src="/assets/trueColor.jpg">
+                            </div>
+                            <div class="video-caption video-caption--right">"The Valley Fire has already become one of California’s most damaging fires. Only two other blazes—the Cedar fire in 2003 and the Tunnel Fire in 1991—destroyed more structures.”</div>
+                        </div>
+
+                        <div class="video">
+                            <div class="video-container">
+                                <img src="/assets/infraColor.jpg">
+                            </div>
+                            <div class="video-caption">"In 48 hours the fire burned through and area twice the size of Manhattan. Meanwhile, extreme drought over the past four years has sucked the forests dry of moisture, leaving the trees unusually combustible. Bark beetles, taking advantage of water stressed trees, have also made the pine forests vulnerable.”</div>
+                        </div>
+
+                        <div class="video" data-video="ValleyFire-first" data-animation>
+                            <div class="video-container">
+                                <div class="video-source"></div>
+                            </div>
+                            <div class="video-caption">More than 400 homes were lost and thousands fled. One resident from the area recorded these videos showing what it was like to escape through the flames.</div>
+                        </div>
+
+                        <div class="video" data-video="ValleyFire-second" data-animation>
+                            <div class="video-container">
+                                <div class="video-source"></div>
+                            </div>
+                            <div class="video-caption">Wildfires in the western United States have been increasing in frequency and duration since the mid-1980s, occurring nearly four times more often, burning more than six times the land area, and lasting almost five times as long. </div>
+                        </div>
+
+                        <div class="video" data-video="ValleyFire-third" data-animation>
+                            <div class="video-container">
+                                <div class="video-source"></div>
+                            </div>
+                            <div class="video-caption">“The Valley Fire is breaking all the rules in the midst of a fire season that had already rewritten the rulebook," Daniel Swain, a climate earth system scientist at Stanford University, said.</div>
+                        </div>
+
+                        <div class="video" data-video="ValleyFire-fourth" data-animation>
+                            <div class="video-container">
+                                <div class="video-source"></div>
+                            </div>
+                            <div class="video-caption video-caption--center">"What’s going on in Lake County is a direct manifestation of California’s record-breaking drought, and it’s pretty sobering.”</div>
+                        </div>
+
+                        <div class="video">
+                            <div class="video-container">
+                                <div class="video-source"></div>
+                            </div>
+                            <div class="video-caption video-caption--center">We call it the 21st Century.
+                              <br>It’s time for Homo sapiens to grow up
+                              <br>before we drive the hotrod of civilization off a cliff.
+                              <br>Take action today.
+                              <br><a href='http://www.turn21.org'>turn21.org</a></div>
+                        </div>
+                      </div> <!-- Video Sequence -->
+
+                    </div> <!-- Article -->
+                </div> <!-- Main -->
+
+
+
+
+        <script>defer(function() {
+
+    var _video_assets = "./Video" + "/",
+        _image_assets = "./Video" + "/",
+        _audio_assets = "http://graphics8.nytimes.com/newsgraphics/2013/10/24/south-china-sea-videos/assets/" + "audio/";
+
+
+    var mute = false,
+        muteVolume = "volume",
+        fixRatio = 16 / 9,
+        fixHeight = innerWidth / fixRatio,
+        fixTop = Math.round((innerHeight - fixHeight) / 2),
+        fadeTop = Math.max(200, fixTop),
+        fadeBottom = Math.min(innerHeight - 200, fixTop + fixHeight),
+        fade = d3.interpolateRgb("#000", "#fff");
+
+    var headline = d3.select(".navigation-headline");
+
+    var sequence = d3.selectAll(".video-sequence")
+    .datum(function() {
+        return {
+            first: !this.previousElementSibling,
+            audio: this.getAttribute("data-audio"),
+            length: this.querySelectorAll(".video").length
+        };
+    })
+    .call(d3.behavior.watch()
+          .on("scroll", sequencescrolled)
+          .on("statechange", sequencestatechanged));
+
+    sequence.filter(function(d) { return d.audio; }).append("audio")
+    .attr("src", function(d) { return _audio_assets + d.audio + ".mp3"; })
+    .property("loop", true);
+
+    var section = d3.selectAll(".video")
+    .datum(function() {
+        var previous = this.previousElementSibling,
+            next = this.nextElementSibling;
+        return {
+            video: this.getAttribute("data-video"),
+            animation: this.hasAttribute("data-animation"),
+            first: !previous || !d3.select(previous).classed("video"),
+            last: !next || !d3.select(next).classed("video")
+        };
+    });
+
+    var sectionFixed = sequence.selectAll(".video")
+    .each(function(d) { d.sequence = this.parentNode.__data__; })
+    .call(d3.behavior.watch()
+          .on("scroll", fixscrolled)
+          .on("statechange", fixstatechanged));
+
+    var container = section.select(".video-container");
+
+    var video = container.filter(function(d) { return d.video; }).append("video")
+    .attr("preload", "none")
+    .attr("poster", function(d) { return d.animation && !d.first ? _image_assets + d.video + "-poster.png?2" : null; })
+    .property("loop", function(d) { return !d.animation; })
+    .text("Your browser does not support this video.");
+
+    video.append("source")
+    .attr("src", function(d) { return _video_assets + d.video + ".mp4"; })
+    .attr("type", "video/mp4");
+
+    video.append("source")
+    .attr("src", function(d) { return _video_assets + d.video + ".webm"; })
+    .attr("type", "video/webm");
+
+    if (!supportsViewportUnits()) sectionFixed.append("div")
+    .style("height", fixHeight + "px");
+
+    var containerFixed = sectionFixed.select(".video-container")
+    .style("z-index", function(d) { return d.first || d.last ? 1 : 2; })
+    .style("position", function(d) { return d.first || d.last ? "absolute" : "fixed"; })
+    .style("top", function(d) { return d.first || d.last ? null : fixTop + "px"; })
+    .style("display", function(d) { return d.first || d.last ? null : "none"; });
+
+    containerFixed.append("div")
+    .attr("class", "video-sequence-indicator")
+    .style("margin-top", function(d) { return -d.sequence.length * 1.4 / 2 + "em"; })
+    .text(function(d, i) { return d3.range(d.sequence.length).map(function(j) { return i === j ? "●" : "○"; }).join("\n"); });
+
+    var muteButton = d3.select(".navigation-volume")
+    .on("click", muted);
+
+    d3.select(window)
+    .on("load.video", loaded)
+    .on("resize.video", resized);
+
+    d3.select("video")
+    .attr("preload", "auto");
+
+    resized();
+
+    function loaded() {
+        video.attr("preload", function(d) { return d.first ? "auto" : "none"; });
+        d3.selectAll('video').property('volume',0);
+    }
+
+    function muted() {
+        mute = !mute;
+        muteVolume = mute ? "_volume" : "volume";
+        muteButton.classed("navigation-volume--muted", mute);
+        d3.event.preventDefault();
+        d3.selectAll("audio,video").interrupt().property("volume", mute
+                                                         ? function() { this._volume = this.volume; return 0; }
+                                                         : function() { return this._volume; });
+    }
+
+    function resized() {
+        fixHeight = innerWidth / fixRatio;
+        fixTop = Math.round((innerHeight - fixHeight) / 2);
+        fadeTop = Math.max(200, fixTop);
+        fadeBottom = Math.min(innerHeight - 200, fixTop + fixHeight);
+        d3.select(".video-sequence:first-child").style("margin-top", fixTop + "px");
+        containerFixed.style("height", fixHeight + "px").filter(function(d) {
+            var rect = this.parentNode.getBoundingClientRect();
+            return d.first ? rect.top < fixTop
+            : d.last ? rect.bottom >= fixTop + fixHeight
+            : true;
+        }).style("top", fixTop + "px");
+    }
+
+    function fixscrolled(d) {
+        if (d.first || d.last) {
+            var fixed = (d.first && d3.event.rect.top < fixTop)
+            || (d.last && d3.event.rect.bottom >= fixTop + fixHeight);
+            d3.select(this.querySelector(".video-container"))
+            .style("z-index", fixed ? 2 : 1)
+            .style("position", fixed ? "fixed" : "absolute")
+            .style("top", fixed ? fixTop + "px" : null);
+        }
+
+        var section = d3.select(this),
+            container = section.select(".video-container"),
+            videoNode = this.querySelector(".video-container video"),
+            volume = 1;
+
+        var opacityTop = d3.event.rect.top - fixHeight / 4,
+            opacity = opacityTop > fixTop + fixHeight * 4 / 5 ? 0 // previous video fully opaque
+        : !d.last && opacityTop < fixTop - fixHeight ? 0 // next video fully covers this video
+        : opacityTop < fixTop ? 1 // this video is fully opaque, but may be covered by next video
+        : Math.max(0, Math.min(1, 1 - (opacityTop - fixTop) / (fixHeight / 5))); // this video is partially opaque
+
+        if (d.first) {
+            if (videoNode) {
+                volume = d3.event.rect.top < fixTop + fadeTop ? Math.max(0, Math.min(1, 1 - (d3.event.rect.top - fixTop) / fadeTop)) : 0;
+                var play = d3.event.rect.top <= fixTop + fadeTop;
+                if (videoNode.paused) {
+                    if (play && (!d.animation || (videoNode.currentTime < videoNode.duration && volume > .8))) {
+                        videoNode.play();
+                    }
+                } else if (!play) {
+                    videoNode.pause();
+                }
+            }
+            container.style("opacity", opacityTop >= fixTop - fixHeight ? 1 : 0);
+        } else {
+            container.style("opacity", opacity);
+            if (videoNode) {
+                if (videoNode.paused) {
+                    if (opacity) {
+                        if (!d.animation || (videoNode.currentTime < videoNode.duration && opacity > .8)) {
+                            videoNode.play();
+                        }
+                    } else if (videoNode.currentTime) {
+                        videoNode.currentTime = 0;
+                    }
+                } else if (!opacity) {
+                    videoNode.pause();
+                    if (videoNode.currentTime) videoNode.currentTime = 0;
+                }
+            }
+        }
+
+        if (d.last) {
+            if (videoNode) {
+                volume = d3.event.rect.bottom < fadeBottom ? Math.max(0, Math.min(1, 1 - (fadeBottom - d3.event.rect.bottom) / fadeTop)) : 1;
+                var play = d3.event.rect.bottom >= fadeBottom - fadeTop;
+                if (videoNode.paused) {
+                    if (play && (!d.animation || (videoNode.currentTime < videoNode.duration && volume > .8))) {
+                        videoNode.play();
+                    }
+                } else if (!play) {
+                    videoNode.pause();
+                }
+            }
+        }
+
+        section.select(".video-caption").style("opacity", opacityTop > fixTop ? (d.first ? 1 : Math.max(0, 1 - (opacityTop - fixTop) / (fixHeight / 5))) // fade in from bottom
+                                               : opacityTop > fixTop - fixHeight * 4 / 5 ? 1 // this video is fully opaque and not covered
+                                               : d.last ? 1 : Math.max(0, (opacityTop - fixTop + fixHeight * 4 / 5) / (fixHeight / 5) + 1)); // fade out to top
+
+        if (videoNode) {
+            videoNode[muteVolume] = volume = volume !== 1 ? volume // special-case volume for first and last fade
+            : opacityTop < fixTop - fixHeight ? 0 // video is fully covered by next video
+            : opacityTop < fixTop - fixHeight / 2 ? Math.max(0, Math.min(1, (opacityTop - fixTop + fixHeight) / (fixHeight / 2)))
+            : opacity;
+
+            if (d.first && d.sequence.first) headline.style("opacity", 1 - volume);
+        }
+        d3.selectAll('video').property('volume',0);
+    }
+
+    function fixstatechanged(d) {
+        d3.select(this.querySelector(".video-container"))
+        .style("display", d3.event.state ? null : "none")
+        .select("video")
+        .each(function() {
+            if (!d3.event.state) {
+                if (!this.paused) this.pause();
+                if (this.currentTime) this.currentTime = 0;
+            }
+        });
+
+        if (d.first && d.sequence.first && !d3.event.state) headline.style("opacity", null);
+    }
+
+    function sequencescrolled() {
+        var opacity = Math.max(0, Math.min(1, d3.event.rect.bottom < fadeBottom ? (fadeBottom - d3.event.rect.bottom) / fadeTop
+                                           : d3.event.rect.top < fixTop + fadeTop ? (d3.event.rect.top - fixTop) / fadeTop
+                                           : 1));
+        d3.select("body").style("background", fade(opacity));
+        d3.select(this).select("audio").property(muteVolume, 1 - opacity);
+        d3.selectAll('video').property('volume',0);
+    }
+
+    function sequencestatechanged() {
+        var sequence = d3.select(this),
+            audio = sequence.select("audio");
+        if (d3.event.state) {
+            sequence.selectAll("video").each(function() { this.preload = "auto"; });
+            audio.each(function() { this.play(); });
+        } else {
+            d3.select("body").style("background", null);
+            audio.each(function() { this.pause(); });
+        }
+        d3.selectAll('video').property('volume',0);
+    }
+
+    function supportsViewportUnits() {
+        var element = d3.select("body").append("div").style("width", "50vw"),
+            expected = innerWidth / 2,
+            actual = parseFloat(element.style("width"));
+        element.remove();
+        return Math.abs(expected - actual) <= 1;
+    }
+
+});</script>
+        <style>
+
+            .footer-section {
+                background: #000;
+                margin-top: 0;
+                padding: 7px 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .footer-section a {
+                border-right: 1px solid #ccc;
+                color: #aaa;
+                font: 10px sans-serif;
+                margin-right: 7px;
+                padding-right: 7px;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+            .footer-section a:last-child {
+                border-right: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .footer-section a:hover {
+                text-dceoration: underline;
+            }
+
+            .footer-section ~ * {
+                position: absolute;
+                top: -1000px;
+            }
+
+        </style>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+        <script>(function() {
+
+    var watched = [];
+
+    d3.behavior.watch = function() {
+        var event = d3.dispatch("statechange", "scroll");
+
+        function watch(selection) {
+            selection.each(function(i) {
+                watched.push({
+                    element: this,
+                    state: 0,
+                    index: i,
+                    event: event
+                });
+            });
+        }
+
+        return d3.rebind(watch, event, "on");
+    };
+
+
+    d3.select(window)
+    .on("resize.watch", watch_scrolled)
+    .on("scroll.watch", watch_scrolled)
+    .on("DOMContentLoaded.watch", watch_scrolled);
+
+
+    function watch_scrolled() {
+        watched.forEach(function(watch) {
+            var rect = watch.element.getBoundingClientRect();
+            if (rect.top + rect.height < 0 || rect.bottom - rect.height - innerHeight > 0) {
+                watch_state(watch, 0);
+            } else {
+                var t = rect.top / (innerHeight - rect.height);
+                watch_state(watch, t < 0 || t > 1 ? 1 : 2);
+                watch_dispatch(watch, {type: "scroll", offset: t, rect: rect});
+            }
+        });
+    }
+
+    function watch_scrolledStatic() {
+        watched.forEach(function(watch) {
+            watch_state(watch, 1);
+            watch_dispatch(watch, {type: "scroll", offset: .5, rect: {top: 0}}); // XXX rect
+        });
+    }
+
+    function watch_state(watch, state1) {
+        var state0 = watch.state;
+        if (state0 !== state1) watch_dispatch(watch, {
+            type: "statechange",
+            state: watch.state = state1,
+            previousState: state0
+        });
+    }
+
+    function watch_dispatch(watch, event) {
+        var element = watch.element,
+            sourceEvent = event.sourceEvent = d3.event;
+        try {
+            d3.event = event;
+            watch.event[event.type].call(element, element.__data__, watch.index);
+        } finally {
+            d3.event = sourceEvent;
+        }
+    }
+
+    await();
+
+})();
+        </script>
